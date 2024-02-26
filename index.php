@@ -10,7 +10,14 @@ $cats = new Category ('gatti');
 
 $products =[];
 
-$product = new Product('prodotto','https://www.animalhouseitalia.it/15814-large_default/ferribiella-palla-fuxtreme-ultrasuoni-per-cani-taglia-media.jpg',5.50,$dogs);
+try {
+    $product = new Product('prodotto','https://www.animalhouseitalia.it/15814-large_default/ferribiella-palla-fuxtreme-ultrasuoni-per-cani-taglia-media.jpg',5.50,$dogs);
+}
+catch($Exception $exception) {
+    echo '<h2> Inserisci un numero</h2>';
+}
+
+
 
 $products[] = $product;
 
